@@ -37,6 +37,22 @@ Paciente.prototype.getDiagnostico = function () {
   return this.diagnostico;
 };
 
+Paciente.prototype.setName = function (name) {
+  return this.name = name;
+};
+
+Paciente.prototype.setEdad = function (edad) {
+  return this.edad = edad;
+};
+
+Paciente.prototype.setRut = function (rut) {
+  return this.rut = rut;
+};
+
+Paciente.prototype.setDiagnostico = function (diagnostico) {
+  return this.diagnostico = diagnostico;
+};
+
 export default Paciente;
 
 

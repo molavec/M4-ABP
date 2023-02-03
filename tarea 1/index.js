@@ -3,7 +3,12 @@ import Paciente from './paciente.js';
 import Consultorio from './consultorio.js';
 
 const pacienteArray = pacienteList.map((paciente)=> {
-  return new Paciente(paciente);
+  return new Paciente(
+    paciente.nombre,
+    paciente.edad,
+    paciente.rut,
+    paciente.diagnostico,
+  );
 });
 
 const consultorio = new Consultorio('Consultorio Curitas', pacienteArray);
@@ -24,7 +29,7 @@ const buildListadoPacientes = (pacientes) => {
 document.getElementById('pacientes').innerHTML = `${buildListadoPacientes(consultorio.getPacientes())}`;
 
 
-console.log(buildListadoPacientes(consultorio.getPacientes()));
+//console.log(buildListadoPacientes(consultorio.getPacientes()));
 
 const search = (event) => {
 
@@ -42,3 +47,5 @@ const search = (event) => {
 
 }
 
+
+document.getElementById('input-name').addEventListener('change', search);
